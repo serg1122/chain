@@ -46,4 +46,13 @@ func Test_Chain(t *testing.T) {
 
 	assert.Equal(t, v0, chain.First().Value())
 	assert.Equal(t, v2, chain.Last().Value())
+
+	exceptedString := v0 + v1 + v2
+	gotString := ""
+	node := chain.First()
+	for node != nil {
+		gotString += node.Value().(string)
+		node = node.Next()
+	}
+	assert.Equal(t, exceptedString, gotString)
 }
