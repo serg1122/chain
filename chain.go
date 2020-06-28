@@ -5,7 +5,7 @@ type Chain struct {
 	last  *Node
 }
 
-func New() *Chain {
+func CreateChain() *Chain {
 	return &Chain{}
 }
 

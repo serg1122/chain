@@ -6,6 +6,13 @@ type Node struct {
 	value interface{}
 }
 
+func CreateNode(value interface{}) *Node {
+
+	return &Node{
+		value: value,
+	}
+}
+
 func (n Node) HasPrev() bool {
 
 	return n.prev != nil

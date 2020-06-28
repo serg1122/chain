@@ -12,7 +12,7 @@ func Test_Chain(t *testing.T) {
 	v1 := "v1"
 	v2 := "v2"
 
-	chain := New()
+	chain := CreateChain()
 
 	assert.True(t, chain.IsEmpty())
 
